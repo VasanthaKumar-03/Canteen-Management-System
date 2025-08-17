@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+            background-color: #E8E8E8;
+        background-size: 100% 100%;
+        height: 100vh;
+
+}
+.navbar{
+    display: flex;
+    /* padding: 10px; */
+    padding-left: 10px;
+    align-items: center;
+    margin-top: 0;
+    margin-bottom: 0;
+    background-color: #000000;
+
+}
+.navbar h2{
+    color: white;
+    font-size: 2em;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.logo{
+    flex: 6;
+    font-family: Cursive,Brush Script MT;
+}
+.opt,.lbtn{
+    flex: 1;
+}
+
+.navbar a{
+    padding: 20px;
+    width: 200px;
+    font-size: 1.1em;
+    color: beige;
+}
+.opt:hover{
+    color: red;
+    font-size: 1.2em;
+    transition-duration: 0.3s;
+
+}
+.lbtn:active{
+    background-color: rgb(253, 168, 0);
+}
+.lbtn{
+    padding: 10px;
+    width: 100px;
+    font-size: medium;
+    background-color: #7c0f0f;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    margin: 0;
+    border: rgb(73, 4, 4) solid;
+}
+.lbtn:hover{
+    background-color: #5b0a0a;
+}.lbtn:active{
+    background-color: #4b0909;
+}
+.opt{
+    text-decoration: none;
+    text-align: center;
+
+}
+.div-items{
+    background-color: beige;
+    border: #000000 solid;
+    height: 200px;
+    margin: 10px;
+}
+
+
+    th{
+        width: 300px;
+        font-size: 25px;
+        height: 80px;
+
+        background-color: #316163;
+    }
+    td{
+
+        padding: 5px;
+        padding-left: 10px;
+        height: 50px;
+
+    }
+    tbody{
+
+        font-size: 20px;
+        background-color: #7EA2AA;
+    }
+    .btn{
+        text-align: center;
+    }
+    table{
+        margin: 0;
+        margin-bottom:50px;
+        box-shadow: 0 0 50px black;
+
+    }
+    .view{
+        width: 100px;
+        font-size: 20px;
+        height: 40px;
+        background-color: rgb(229, 222, 102);
+        border: 0;
+        border-radius: 5px;
+        box-shadow: 0 0 5px black;
+    }
+    .view:hover{
+        cursor:pointer;
+        background-color: rgb(214, 209, 108);
+        box-shadow: 0 0 5px black;
+    }
+    .container{
+        margin: auto;
+        padding-top: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 30px;
+        width:80%;
+    }
+    h1{
+        padding-left: 20px;
+    }
+    h2{
+        margin:0;
+        color:#70163C;
+    }
+    h3{
+        color:#A53F2B;
+    }
+    .grid-container{
+        margin:auto;
+        width:100%;
+        display:grid;
+        grid-template-columns: 20% 20% 20% 20%;
+        justify-content: center;
+        grid-gap: 20px;
+    }
+    .grid-items{
+        border: none;
+        padding:30px;
+        border-radius: 20px;
+        background-color: #EDFBC1;
+        box-shadow: 0 0 10px black;
+    }
+        .search{
+            margin-left:120px;
+            margin-bottom:30px;
+            margin-top:30px;
+            width: 80%;
+        }
+        input{
+            width: 30%;
+            height: 40px;
+            border: 0;
+            border-radius: 7px;
+            background-color: beige;
+            font-size: 20px;
+            box-shadow: 0 0 20px black;
+        }
+        .searchbtn{
+        width: 100px;
+        font-size: 20px;
+        height: 40px;
+        background-color: rgb(229, 222, 102);
+        border: 0;
+        border-radius: 5px;
+        box-shadow: 0 0 20px black;
+        background-color: #7c0f0f;
+        color:white;
+    }
+    .searchbtn:hover{
+        cursor:pointer;
+        background-color: rgb(214, 209, 108);
+        box-shadow: 0 0 20px black;
+        background-color: #5b0a0a;
+    }
+    img{
+        float: left;
+        height: 150px;
+        width: 200px;
+        margin-left: 20px;
+        border-radius: 20px;
+    }
+
+    .search button{
+        width: 60%;
+        margin: 20px;
+        height: 200px;
+        text-align: center;
+        border-radius: 20px;
+        background-color: #EDFBC1;
+        box-shadow: 0 0 10px black;
+        border: none;
+    }
+    .search button:hover{
+        background-color: #d5ed87;
+        transition-duration: 0.25s;
+    }
+    .labl{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 150px;
+    }
+    .resetbtn{
+        margin-left:40px;
+        width: 100px;
+        height: 40px;
+        font-size: large;
+        border: none;
+        border-radius: 10px;
+        background-color: #411386;
+        color: white;
+        cursor: pointer;
+    }
+    .resetbtn:hover{
+        background-color: #5a3394;
+        transition-duration: 0.25s;
+    }
+        .info{
+            margin-left:40px;
+            color:red;
+        }
+        button{
+    width: 100px;
+    font-size: 20px;
+    height: 40px;
+    background-color: rgb(214, 209, 108);
+    border: 0;
+    border-radius: 5px;
+    box-shadow: 0 0 5px black;
+}
+button:hover{
+    cursor:pointer;
+    background-color: rgb(229, 222, 102);
+    box-shadow: 0 0 5px black;
+}
+        .count{
+            color:red;
+            margin-left:150px;
+
+        }
+    </style>
+    <title>Student data</title>
+</head>
+<body>
+<div class="navbar">
+    <h2 class="logo">Smart Meal Card</h2>
+    <a class="opt" href="/index">Scan</a>
+    <a class="opt" href="/addAccount_page">Add account</a>
+    <a class="opt" href="/studentdata">Student data</a>
+    <a class="opt" href="/foodData">Food list</a>
+    <a class="lbtn" href="/start">Logout</a>
+</div>
+<h1>Student data</h1>
+<h2 class="count" th:text="'No of Veg students : ' + ${countList[0].veg}"></h2>
+<h2 style="margin-bottom:30px;" class="count" th:text="'No of Non-veg students : ' + ${countList[0].nonveg}"></h2>
+
+
+<div class="container">
+    <form action="/deleteData" method="get">
+        <table>
+            <thead>
+            <tr>
+                <th>Student Name</th>
+                <th>Roll No</th>
+                <th>Veg/Non-Veg</th>
+                <th>Department</th>
+                <th>Delete</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="studentData : ${studentList}">
+                <td th:text="${studentData.Name}"></td>
+                <td th:text="${studentData.RollNo}"></td>
+                <td th:text="${studentData.VNV}"></td>
+                <td th:text="${studentData.Department}"></td>
+                <td class="btn">
+                    <button type="submit" name="selectedRow" th:value="${studentData.RollNo}">Delete</button>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </form>
+</div>
+</body>
+</html>
+

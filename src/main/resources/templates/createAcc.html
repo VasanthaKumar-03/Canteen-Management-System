@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create new account</title>
+    <style>
+        body{
+        margin-top: 50px;
+        margin-bottom: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-image: url("login.png");
+        background-size: 100% 100%;
+    }
+    .container{
+        margin-top: 20px;
+        margin-bottom: 20px;
+        font-family: sans-serif;
+        width: 300px;
+        height: 600px;
+        padding: 50px;
+        border-radius: 5%;
+        background-color: rgba(0, 0, 0, 0.699) ;
+        color: aliceblue;
+        box-shadow: 0 0 50px black;
+        backdrop-filter: blur(10px);
+    }
+    .container h1{
+        text-align: center;
+        font-size: 30px;
+        margin-top: 0;
+        margin-bottom: 30px;
+    }
+    .input{
+        width: 292px;
+        margin-top: 10px;
+        margin-bottom: 30px;
+        height: 35px;
+        font-size: medium;
+        border-radius: 5px;
+        background-color: rgba(0, 0, 0, 0.699) ;
+        color: aliceblue;
+        border: 0;
+    }
+    .input:hover{
+        background-color: rgba(102, 3, 3, 0.589);
+    }
+    button{
+        width: 150px;
+        display: block;
+        margin:auto auto auto auto;
+        text-align: center;
+        font-size: large;
+        padding: 10px;
+        border-radius: 10px;
+        border: none;
+        background-color: rgb(133, 2, 2);
+        color: aliceblue;
+    }
+    button:hover{
+        background-color: rgba(145, 4, 4, 0.658);
+        transition-duration: 250ms;
+        width: 160px;
+        cursor: pointer;
+        text-decoration: none;
+    }
+    button:active{
+        background-color: rgba(223, 92, 4, 0.856);
+    }
+    a{
+        text-decoration:none;
+}
+    input[type=radio]{
+        transform: scale(1.5);
+        margin:5px;
+    }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Create new account</h1>
+    <form action="/createAcc" method="post">
+        <label for="Rollno">Roll No</label><br>
+        <input type="text" name="Rollno" id="Rollno" class="input" placeholder="Enter your roll no"><br>
+        <label for="name">Name</label><br>
+        <input type="text" name="name" id="name" class="input" placeholder="Enter your name"><br>
+        <label for="dept">department</label><br>
+        <input type="text" name="dept" id="dept" class="input" placeholder="Eg. EE,CS...."><br>
+        <p>Veg / Non-veg:</p>
+        <input type="radio" id="V" name="mealtype" value="V">
+        <label for="V">Veg</label><br>
+        <input style="margin-bottom: 30px;" type="radio" id="NV" name="mealtype" value="NV">
+        <label  for="NV">Non-Veg</label><br>
+        <label  for="Password">Password</label><br>
+        <input type="password" name="Password" id="Password" class="input" placeholder="Create password"><br>
+        <div><button id="btn" type="submit">Create account</button></div>
+    </form>
+</div>
+</body>
+</html>

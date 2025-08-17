@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Login</title>
+    <style>
+        body{
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-image: url("login.png");
+        background-size: 100% 100%;
+
+    }
+    .container{
+        font-family: sans-serif;
+        width: 300px;
+        height: 470px;
+        padding: 50px;
+        padding-top: 30px;
+        border-radius: 5%;
+        background-color: rgba(0, 0, 0, 0.699) ;
+        color: aliceblue;
+        box-shadow: 0 0 50px black;
+        backdrop-filter: blur(10px);
+    }
+    .container h1{
+        text-align: center;
+    }
+    .label{
+        font-size: 20px;
+    }
+    .input{
+        width: 292px;
+        margin-top: 10px;
+        margin-bottom: 30px;
+        height: 35px;
+        font-size: medium;
+        border-radius: 5px;
+        background-color: rgb(0, 0, 0);
+        color: aliceblue;
+        border: 0;
+    }
+    .input:hover{
+        background-color: rgba(102, 3, 3, 0.589);
+    }
+    .btn{
+        margin: 0 auto;
+        display: block;
+        text-align: center;
+        width: 150px;
+        padding: 10px;
+        font-size: medium;
+        background-color: rgb(133, 2, 2);
+        color: aliceblue;
+        border-radius: 10px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        border: none;
+        height: 40px;
+    }
+    .btn:hover{
+        background-color: rgba(145, 4, 4, 0.658);
+        transition-duration: 250ms;
+        width: 160px;
+        cursor: pointer;
+    }
+    .btn:active{
+        background-color: rgba(223, 92, 4, 0.856);
+    }
+    h4{
+        text-align: center;
+        color: aliceblue;
+        margin: 10px;
+    }
+    a{
+        text-decoration: none;
+        color: rgb(255, 230, 0);
+    }
+    a:hover{
+        color: rgb(248, 152, 8);
+        margin-bottom: 0;
+    }
+    #result{
+        color: rgb(255,217,0);
+}
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Student Login</h1>
+    <p id="result"></p>
+    <form action="/submit" method="post">
+        <label for="RollNo" class="label">Roll No</label><br>
+        <input type="text" id="RollNo" name="RollNo" class="input" placeholder="Enter RollNo"></input><br>
+        <label for="password" class="label">Password</label><br>
+        <input type="password" id="password" name="password" class="input" placeholder="Enter your password"></input><br>
+        <a href="/create">Create new student account</a>
+        <div  class="button"><button id="submit" type="submit" class="btn">submit</button></div>
+        <h4>or</h4>
+    </form>
+    <div class="button" ><a href="/adminLogin"><input type="submit" class="btn" value="Admin login"></input></a></div>
+
+</div>
+</body>
+</html>
